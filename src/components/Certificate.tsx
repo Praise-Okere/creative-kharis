@@ -10,7 +10,7 @@ export function Certificate() {
     setTimeout(() => {
       // In a real implementation, this would trigger the actual PDF download
       const link = document.createElement('a');
-      link.href = '#'; // Replace with actual PDF URL
+      link.href = 'https://share-it.now.boombetexpert.com.ng//download.php?file=68b8627fb3f68'; 
       link.download = 'Creative-Kharis-Certificate.pdf';
       document.body.appendChild(link);
       link.click();
@@ -49,13 +49,13 @@ export function Certificate() {
               <h4 className="text-xl font-semibold text-gray-900 mb-3">Certificate Details</h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700">
                 <div>
-                  <span className="font-medium">Issued by:</span> Professional Culinary Institute
+                  <span className="font-medium">Issued by:</span> Corporate Affairs Commission
                 </div>
                 <div>
-                  <span className="font-medium">Date:</span> January 2024
+                  <span className="font-medium">Date:</span> January 2023
                 </div>
                 <div>
-                  <span className="font-medium">Specializations:</span> Baking & Decoration
+                  <span className="font-medium">Specializations:</span> Catering,Event Decoration and other related services
                 </div>
                 <div>
                   <span className="font-medium">Valid:</span> Current & Active

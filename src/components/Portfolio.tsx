@@ -4,50 +4,50 @@ import { ArrowUpRight } from 'lucide-react';
 const portfolioItems = [
   {
     category: 'cakes',
-    title: 'Wedding Cake Masterpiece',
-    image: 'https://images.pexels.com/photos/1721932/pexels-photo-1721932.jpeg?auto=compress&cs=tinysrgb&w=800',
-    description: 'Three-tier elegant wedding cake with floral decorations'
+    title: 'Wedding Cake',
+    image: 'https://pastryempire.com/wp-content/uploads/2024/04/IMG_20211127_151848_23.jpg',
+    description: 'Three-tier elegant wedding cake with decorations'
   },
   {
     category: 'decorations',
     title: 'Birthday Party Setup',
-    image: 'https://images.pexels.com/photos/1729797/pexels-photo-1729797.jpeg?auto=compress&cs=tinysrgb&w=800',
-    description: 'Colorful birthday party decoration with balloons and streamers'
+    image: 'https://naphtalirentals.com/wp-content/uploads/2020/08/116841758_125782875546199_3138027645129275857_n.jpg',
+    description: 'Colorful birthday party decoration with balloons'
   },
   {
     category: 'cakes',
-    title: 'Custom Birthday Cake',
-    image: 'https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg?auto=compress&cs=tinysrgb&w=800',
+    title: 'Birthday Cake',
+    image: 'https://image.api.sportal365.com/process/smp-images-production/pulse.ng/27072024/4dd218ca-b6df-4679-8dda-47f115baad75?operations=autocrop(1042:580)',
     description: 'Personalized birthday cake with custom decorations'
   },
   {
     category: 'decorations',
-    title: 'Bridal Shower Elegance',
-    image: 'https://images.pexels.com/photos/169193/pexels-photo-169193.jpeg?auto=compress&cs=tinysrgb&w=800',
-    description: 'Romantic bridal shower setup with pink and white theme'
+    title: 'Bridal Shower Decor',
+    image: 'https://i.pinimg.com/736x/ef/98/49/ef98499fcccd9415297875b43321b773.jpg',
+    description: 'Romantic bridal shower setup '
   },
   {
     category: 'catering',
-    title: 'Gourmet Chops Platter',
-    image: 'https://images.pexels.com/photos/776538/pexels-photo-776538.jpeg?auto=compress&cs=tinysrgb&w=800',
-    description: 'Perfectly grilled chops with professional presentation'
+    title: 'Small Chops',
+    image: 'https://i.pinimg.com/originals/58/45/00/58450016cc971cf04eb94f83e9df06d8.jpg',
+    description: 'Delicious small chops '
   },
   {
     category: 'decorations',
     title: 'Wedding Ceremony Decor',
-    image: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=800',
-    description: 'Stunning wedding ceremony decoration with floral arrangements'
+    image: 'https://virginroseresorts.com/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-26-at-17.51.41.jpeg',
+    description: 'Stunning wedding ceremony decoration '
   },
   {
     category: 'cakes',
     title: 'Anniversary Special',
-    image: 'https://images.pexels.com/photos/1721939/pexels-photo-1721939.jpeg?auto=compress&cs=tinysrgb&w=800',
-    description: 'Elegant anniversary cake with gold accents'
+    image: 'https://regalodelights.com/cdn/shop/files/WhatsAppImage2024-04-06at4.23.33PM_1.jpg?v=1712487251',
+    description: 'Elegant anniversary cake '
   },
   {
     category: 'catering',
-    title: 'Event Catering Spread',
-    image: 'https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=800',
+    title: 'Event Catering',
+    image: 'https://www.nairaland.com/attachments/4959192_img20170305193808153_jpegd34fd4ae56d03734c145868a3ae808e6',
     description: 'Complete catering setup for special events'
   }
 ];

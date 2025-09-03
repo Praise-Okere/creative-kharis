@@ -42,8 +42,15 @@ export function Hero() {
             onClick={scrollToContact}
             className="group bg-gradient-to-r from-rose-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2"
           >
-            Hire Us Now
-            <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <a
+      href="https://wa.link/syj35i" 
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group bg-gradient-to-r from-rose-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2"
+>
+  Contact Us
+  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+</a>
           </button>
           
           <button

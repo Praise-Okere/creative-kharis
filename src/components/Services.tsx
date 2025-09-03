@@ -10,7 +10,7 @@ const services = [
   },
   {
     icon: Utensils,
-    title: 'Gourmet Catering',
+    title: 'Event Catering',
     description: 'Delicious chops and gourmet food preparation for events of all sizes. Fresh ingredients and exceptional taste guaranteed.',
     features: ['Grilled Chops', 'Finger Foods', 'Main Courses', 'Appetizers']
   },

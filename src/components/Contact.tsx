@@ -11,6 +11,7 @@ export function Contact() {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(''); // 'success', 'error', or ''
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -19,48 +20,67 @@ export function Contact() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      alert('Thank you for your inquiry! We will contact you within 24 hours.');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        eventType: '',
-        date: '',
-        message: ''
+    setSubmitStatus('');
+
+  
+    const form = e.target as HTMLFormElement;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/myzdbylp", {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
       });
-      setIsSubmitting(false);
-    }, 1000);
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          eventType: '',
+          date: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (err) {
+      setSubmitStatus('error');
+    }
+    
+    setIsSubmitting(false);
   };
 
   const contactInfo = [
     {
       icon: Phone,
       label: 'Phone',
-      value: '+234 xxx xxx xxxx',
-      href: 'tel:+234xxxxxxxxx'
+      value: '+234 813 400 4919',
+      href: 'tel:+2348134004919'
     },
     {
       icon: Mail,
       label: 'Email',
-      value: 'info@creativekharis.com',
-      href: 'mailto:info@creativekharis.com'
+      value: 'charityassor1@gmail.com',
+      href: 'mailto:charityassor1@gmail.com'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Lagos, Nigeria',
+      value: 'Port Harcourt, Nigeria',
       href: '#'
     },
     {
       icon: Clock,
       label: 'Hours',
-      value: 'Mon - Sat: 9AM - 8PM',
+      value: 'Mon - Sat: 9AM - 6PM, Sunday: 12noon - 5PM',
       href: '#'
     }
   ];
@@ -115,6 +135,22 @@ export function Contact() {
 
           <div className="bg-white rounded-2xl shadow-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
+            
+            {/* Success Message */}
+            {submitStatus === 'success' && (
+              <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-xl">
+                <p className="font-semibold">Thank you for your inquiry!</p>
+                <p>We will contact you within 24 hours.</p>
+              </div>
+            )}
+
+            {/* Error Message */}
+            {submitStatus === 'error' && (
+              <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-xl">
+                <p className="font-semibold">Oops! Something went wrong.</p>
+                <p>Please try again or contact us directly.</p>
+              </div>
+            )}
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -222,7 +258,7 @@ export function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-rose-500 to-purple-600 text-white py-4 px-6 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-rose-500 to-purple-600 text-white py-4 px-6 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
                 <Send className={`h-5 w-5 ${isSubmitting ? 'animate-spin' : ''}`} />
                 {isSubmitting ? 'Sending...' : 'Send Message & Hire Us'}
